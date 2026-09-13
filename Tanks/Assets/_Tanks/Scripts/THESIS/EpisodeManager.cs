@@ -41,7 +41,10 @@ namespace Tanks.Complete
         private void OnResetReceived(int envId)
         {
             if (envId == this.envId)
+            {
+                Debug.Log($"Reset environment received for env {envId}");
                 EndEpisode();
+            }
         }
         
         public void EndEpisode()

@@ -27,7 +27,6 @@ namespace Tanks.Complete
 
             if (healthAfter >= healthBefore)
             {
-                Debug.Log($"[LOGIC BUG: Before: {healthBefore:F2}, After: {healthAfter:F2}]");
                 ReportBug(
                     "damage_not_applied",
                     $"Explosion hit tank but health didn't decrease! " +

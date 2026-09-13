@@ -38,7 +38,6 @@ namespace Tanks.Complete
 
                 string safeMessage = $"{cleanLog} - STACK: {cleanStack}";
 
-                Debug.Log("AAA eccezioneee");
                 if (type == LogType.Error)
                 {
                     ReportBug("error", safeMessage);

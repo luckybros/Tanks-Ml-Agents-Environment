@@ -33,8 +33,6 @@ namespace Tanks.Complete
 
             // int currentStep = Unity.MLAgents.Academy.Instance.StepCount;
 
-            Debug.LogWarning($"[{OracleName}] {message}");
-
             if (OracleManager.Instance != null)
             {
                 OracleManager.Instance.ReportGameLogicBug(OracleName, bugType, message);

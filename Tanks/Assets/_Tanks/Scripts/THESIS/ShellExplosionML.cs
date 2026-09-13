@@ -72,7 +72,6 @@ namespace Tanks.Complete
 
                 if (BugVersionDamageNotApplied)
                 {
-                    Debug.Log($"Bug Damage One:");
                     if (targetHealth.m_CurrentHealth >= 20f)
                     {
                         targetHealth.TakeDamage (damage, m_ShootingAgent);
@@ -129,16 +128,11 @@ namespace Tanks.Complete
             {
                 bool isVictimLowHealth = targetHealth.m_CurrentHealth <= (10f);
 
-                Debug.Log($"isVictimLowHealth: {isVictimLowHealth}, targetHealth: {targetHealth.m_CurrentHealth}!");
-
                 if (isVictimLowHealth && attacker.gameObject != targetHealth.gameObject)
                 {
                     Vector3 distanceBetweenTanks = targetPosition - m_ShootingAgent.transform.position;
-                    Debug.Log($"explosion Distante: {distanceBetweenTanks.magnitude}!");
                     float distanceBetweenTanksMagnitude = distanceBetweenTanks.magnitude / 15f;
-                    Debug.Log($"explosion Distante: {distanceBetweenTanksMagnitude}!");
                     int distInt = Mathf.FloorToInt(distanceBetweenTanksMagnitude);
-                    Debug.Log($"distInt: {distInt}");
                     int bonusDamage = Mathf.FloorToInt(m_MaxDamage) / distInt;
 
                 }

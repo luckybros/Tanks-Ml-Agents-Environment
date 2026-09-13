@@ -297,7 +297,6 @@ namespace Tanks.Complete
                     int chargeIndex = Mathf.FloorToInt(
                         (m_CurrentLaunchForce - m_MinLaunchForce) / (m_MaxLaunchForce - m_MinLaunchForce) * damageScales.Length
                     );
-                    Debug.Log($"BugVersionCrashOutOfBounds tankShooting:{chargeIndex}");
                     explosionData.m_MaxDamage += damageScales[chargeIndex];
                 }
                 // Reset the default values after increasing the damage of the fired shell

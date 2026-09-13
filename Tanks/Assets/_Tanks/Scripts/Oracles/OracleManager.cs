@@ -34,7 +34,6 @@ namespace Tanks.Complete
         {
             while (!Academy.IsInitialized)
             {
-                Debug.Log("[OracleManager] Waiting for Academy to inizitalize...");
                 yield return new WaitForSeconds(0.1f);
             }
 

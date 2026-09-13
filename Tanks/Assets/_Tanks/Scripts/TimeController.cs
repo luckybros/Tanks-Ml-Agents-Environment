@@ -4,7 +4,6 @@ public class TimeController : MonoBehaviour
 {
     void Start()
     {
-        PrintEngineStats("AVVIO (Valori di Default di Unity)");
     }
 
     void Update()

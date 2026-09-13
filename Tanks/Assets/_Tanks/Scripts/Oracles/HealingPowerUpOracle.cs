@@ -40,7 +40,6 @@ namespace Tanks.Complete
             // Check 2: health should NEVER exceed the maximum
             if (healthAfter > maxHealth + 0.01f)
             {
-                Debug.Log($"[LOGIC BUG DETECTED]: Before: {healthBefore:F2}, After: {healthAfter:F2}");
                 ReportBug("healing_over_max",
                     $"Healing caused health to exceed maximum! " +
                     $"Before: {healthBefore:F2}, After: {healthAfter:F2}, " +

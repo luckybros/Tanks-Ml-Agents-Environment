@@ -303,27 +303,19 @@ namespace Tanks.Complete
             // if he doesnt hurt himself
             if (attacker != this)
             {
-                Debug.Log("Altro agente colpito!");
                 attacker.AddReward(Mathf.Clamp01(damageAmount / 100f) * 0.1f);
-            }
-            else
-            {
-                Debug.Log("Colpito da solo");
             }
         }
 
         private void OnDeath(TankAgent attacker)
         {
-            Debug.Log($"On Death:");
             AddReward(-0.5f);
             if (attacker != this)
             {
-                Debug.Log("Killed other agent!");
                 attacker.AddReward(0.5f);
             }
             else 
             {
-                Debug.Log("Ucciso da solo");
             }
             StartCoroutine(EndEpisodeDelayed());
             // se attacker 
@@ -348,7 +340,6 @@ namespace Tanks.Complete
 
         private void OnPowerUpApplied()
         {
-            Debug.Log("Power up applied!");
             AddReward(0.2f);
         }
 
@@ -372,7 +363,6 @@ namespace Tanks.Complete
 
             if (isNewTile)
             {
-                Debug.Log("auauauauauauau new tile");
                 AddReward(0.1f);
             }
         }

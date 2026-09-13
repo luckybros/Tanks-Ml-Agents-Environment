@@ -190,14 +190,38 @@ PrefabInstance:
       propertyPath: useVectorObs
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3036528104183155514, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3058987950801278460, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 5865913177754449601}
+    - target: {fileID: 3136487718999234378, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437252952694207123, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_RayLength
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524838741396172056, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278055923029046400, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_RayLength
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4512205774496404463, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 8543587794546560007}
+    - target: {fileID: 5325131617783135179, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5339727690283957040, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_Name
       value: Environment Variant
@@ -205,6 +229,18 @@ PrefabInstance:
     - target: {fileID: 5378145188784510318, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542691774663629125, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_RayLength
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342966746406248278, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_RayLength
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565829431494034771, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6795409460997968765, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_IsActive
@@ -221,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 7105879092355128018, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7193729577637837705, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7342897805154982911, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_LocalPosition.x
@@ -260,6 +300,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7342897805154982911, guid: 18e0c096bea9446de95c724564961006, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733507918536002487, guid: 18e0c096bea9446de95c724564961006, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7819067513702563956, guid: 18e0c096bea9446de95c724564961006, type: 3}

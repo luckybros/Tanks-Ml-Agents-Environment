@@ -21,7 +21,6 @@ namespace Tanks.Complete
                 if (trapCollider.bounds.Contains(playerCollider.bounds.min) && 
                 trapCollider.bounds.Contains(playerCollider.bounds.max))
                 {
-                    Debug.Log("Bug activated, player trapped");
                     trapCollider.isTrigger = false;
                 }
 

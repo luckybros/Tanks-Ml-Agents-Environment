@@ -45,7 +45,6 @@ namespace Tanks.Complete
         
         private void Start()
         {
-            // Debug.Log($"Start Stuck oracle");
             for (int i = 0; i < tanks.Count; i++)
             {
                 positionHistories.Add(new Queue<Vector2>());
@@ -78,13 +77,12 @@ namespace Tanks.Complete
                 // check if the tank movement is taking an input, if is not moving per scelta non c'è bisogno
                 bool isTryingToMove = tankMovements[i].IsMoving || tankMovements[i].IsTurning;
 
-                if (history.Count >= historySize && isTryingToMove && IsStuck(currentPos, history))
+                if (history.Count >= historySize && isTryingToMove && IsStuck(currentPos, history) && HasABugNear(tanks[i]))
                 {
                     int envId = tanks[i].parent.GetComponentInChildren<EpisodeManager>().EnvID;
 
                     Vector2Int discretePos = DiscretizePosition(currentPos);
 
-                    Debug.Log($"Stuck!");
                     ReportBug(
                         $"stuck_{discretePos.x}_{discretePos.y}", // <-- Aggiunta la posizione discreta al tipo di bug
                         $"environment_{envId} " +
@@ -118,7 +116,7 @@ namespace Tanks.Complete
             return new Vector2Int(cellX, cellY);
         }
 
-        private string GetActiveBuggerName(Transform tankTransform)
+        private bool HasABugNear(Transform tankTransform)
         {
             int numberOfRays = 8;
             
@@ -141,7 +139,7 @@ namespace Tanks.Complete
                     // Se il raggio colpisce un oggetto con lo script StuckBugger
                     if (hit.collider.TryGetComponent<StuckBugger>(out StuckBugger bugger))
                     {
-                        return bugger.gameObject.name;
+                        return bugger.gameObject.name == "StuckBugger1" || bugger.gameObject.name == "StuckBugger2";
                     }
                 }
             }
@@ -153,11 +151,11 @@ namespace Tanks.Complete
             {
                 if (col.TryGetComponent<StuckBugger>(out StuckBugger bugger))
                 {
-                    return bugger.gameObject.name;
+                    return bugger.gameObject.name == "StuckBugger1" || bugger.gameObject.name == "StuckBugger2";
                 }
             }
 
-            return "Unknown";
+            return false;
         }
     }
 }
